@@ -2948,16 +2948,17 @@ body:before {height: 416px; background: #393D41 url(%%headerimg%%) fixed no-repe
 @media only screen and (min-width : 1921px) {body:before {background-size: cover;}}
 
     /* Add or subtract THE SAME AMOUNT ON EACH OF THESE */
-body>.content                   {margin-top:        342px;} 
-.side                           {margin-top:        496px;} 
-.search-page .side              {margin-top:        394px;} 
-.comments-page .side            {margin-top:        558px;}
-.res .comments-page .side       {margin-top:        572px;}
-.comments-page .side .linkinfo  {margin-top:        246px;} 
-#search, .search-page .morelink {top:               342px;} 
-.morelink                       {top:               394px;}
-.submit-text .morelink          {top:               444px;}
-#header-bottom-left             {top:               278px;}
+body>.content                   	{margin-top:        342px;} 
+.side                         	 	{margin-top:        496px;} 
+.search-page .side           	   	{margin-top:        444px;} 
+.comments-page .side            	{margin-top:        608px;}
+.res .comments-page .side       	{margin-top:        572px;}
+.comments-page .side .linkinfo  	{margin-top:        296px;}
+.morelink                       	{top:               394px;}
+.submit-text .morelink          	{top:               444px;}
+#search, .search-page .morelink 	{top:               342px;}
+.search-page .submit-text .morelink {top:               394px;}
+#header-bottom-left             	{top:               278px;}
 
 #header .tabmenu li a, .pagename a {text-shadow: 0px 1px 8px rgba(0, 0, 0, 0.5);}
 #header .tabmenu li a:hover, .pagename a:hover {background-color: rgba(0, 0, 0, 0.12);}
