@@ -2,6 +2,12 @@ $color-primary: #aad7b6;
 $color-secondary: #4b9bb2;
 $color-tetriary: #5da0b3;
 
+$color-gray-light: #f2f2f2;
+$color-gray: #C9D4DA;
+
+$color-like: #E63B4F;
+$color-dislike: #245C61;
+
 /*
 		Version 3.2
 		Stylesheet by Cryptonaut
@@ -519,7 +525,7 @@ $color-tetriary: #5da0b3;
 
 				/* Expando */
 				#search #searchexpando {
-					background-color: #f2f2f2;
+					background-color: $color-gray-light;
 					border: none;
 					border-radius: 0px 0px 2px 2px;
 					margin-top: -5px;
@@ -673,7 +679,7 @@ $color-tetriary: #5da0b3;
 					.titlebox .tagline:after {
 						content: "";
 						height: 2px;
-						background-color: #f2f2f2;
+						background-color: $color-gray-light;
 						display: block;
 						margin-top: 16px;
 					}
@@ -960,8 +966,8 @@ $color-tetriary: #5da0b3;
 							margin: 1px 0px 1px 0px;
 						}
 
-							.link .score.likes {color: #ff6422;}
-							.link .score.dislikes {color: #5c5bd7;}
+							.link .score.likes {color: $color-like;}
+							.link .score.dislikes {color: $color-dislike;}
 
 						.arrow {
 							margin: 0px 0px 0px 2px;
@@ -1007,6 +1013,7 @@ $color-tetriary: #5da0b3;
 								height: 20px;
 								background-position: -160px 0px;
 								transition: background-color 0.25s ease;
+								display: none;
 							}
 								.arrow.downmod {
 									height: 20px;
@@ -1060,21 +1067,23 @@ $color-tetriary: #5da0b3;
 
 					/* Linkflairs */
 					.linkflairlabel {
-						padding: 1px 6px 1px 6px;
+						padding: 1px 4px 1px 4px;
 						height: 18px;
-						border-radius: 1px;
-						border: 0px solid;
+						border-radius: 2px;
+						border: 1px solid $color-gray;
 						color: #fff;
 						font-weight: bold;
 						font-style: normal;
 						font-variant: normal;
-						font-size: 13px;
-						font-family: Arial, sans-serif;
+						font-size: 9px;
+						line-height: 16px;
+						font-family: "Lucida Grande", Arial, sans-serif;
 						cursor: default;
 						vertical-align: middle;
 						position: relative;
 						top: -2px;
-						background-color: #4F8EF7;
+						background: none;
+						max-width: none;
 					}
 
 						.linkflair-inspiration .linkflairlabel {
@@ -1114,7 +1123,7 @@ $color-tetriary: #5da0b3;
 
 						.link .entry {
 							padding: 15px 32px 14px 0px;
-							border-bottom: 1px solid #f2f2f2;
+							border-bottom: 1px solid $color-gray-light;
 							margin-left: 0;
 						}
 
@@ -1387,7 +1396,7 @@ $color-tetriary: #5da0b3;
 
 					/* Last Clicked */
 					.link.last-clicked {
-						background-color: #F2F2F2;
+						background-color: $color-gray-light;
 						border: none;
 					}
 
@@ -1819,7 +1828,7 @@ $color-tetriary: #5da0b3;
 					padding: 16px;
 					background-color: #fff;
 					color: #b3b3b3;
-					border-top: 1px solid #F2F2F2;
+					border-top: 1px solid $color-gray-light;
 					margin-top: -1px;
 				}
 
@@ -2555,7 +2564,7 @@ $color-tetriary: #5da0b3;
 			.listing-page .comment {
 				background-color: #fff;
 				margin-left: 0px;
-				border-bottom: 1px solid #F2F2F2;
+				border-bottom: 1px solid $color-gray-light;
 				padding: 12px;
 			}
 
@@ -2973,9 +2982,13 @@ body:before {background-color: $color-primary}
 /* --- Addon: Button color (Secondary Color) --- */
 .morelink, .titlebox .fancy-toggle-button .add, .morelink:after, .content .infobar,
 .submit-page #newlink.submit.content .tabmenu.formtab .selected a, .submit-page .infobar, 
-.submit-page #newlink.submit.content .btn, .drop-choices a.choice:hover, .linkflairlabel, .fancy-toggle-button .remove:active
+.submit-page #newlink.submit.content .btn, .drop-choices a.choice:hover, .fancy-toggle-button .remove:active
 .expando-button:hover, .top-page .content .menuarea .dropdown.lightdrop .selected, .expando-button:hover, .side .titlebox .md h3 a,
 .res div.RES-keyNav-activeElement, .res div.commentarea div.RES-keyNav-activeElement.entry div.noncollapsed, .btn, button {background-color: $color-secondary}
+
+.linkflairlabel {
+	color: $color-secondary;
+}
 
 /* Hover color = 10% white overlay color */
 .morelink:hover, .submit-page #newlink.submit.content .tabmenu.formtab .selected a:hover, .btn:hover, button:hover,
