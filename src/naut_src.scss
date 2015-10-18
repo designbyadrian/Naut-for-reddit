@@ -5,7 +5,9 @@ $color-tetriary: #5da0b3;
 $color-gray-light: #f2f2f2;
 $color-gray: #C9D4DA;
 
-$color-like: #E63B4F;
+$color-red: #E63B4F;
+
+$color-like: $color-red;
 $color-dislike: #245C61;
 
 /*
@@ -3011,3 +3013,11 @@ body .content .sitetable .link .title a:hover, .link .domain a:hover, .link .ent
 .usertext .bottom-area a.reddiquette, .side .titlebox .md h6 a, .link .entry .tagline a:hover, .comment .author:hover
 {color: $color-secondary}
 /* --- End Addon --- */
+
+.linkflairlabel {
+	&.linkflair-spoiler {
+		border-color: $color-red;
+		background-color: $color-red;
+		color: white;
+	}
+}
