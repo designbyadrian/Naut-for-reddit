@@ -552,91 +552,111 @@ body {
 				#search #searchexpando p {display: none !important;}
 
 
-		/* Submit Button */
-		.morelink {
-			position: absolute;
-			top: 148px;
-			box-shadow: 0px 1px 5px rgba(0, 0, 0, 0.24);
-			background-color: #516ae8;
-			background-image: url(%%spritesheet%%) !important;
-			background-position: 268px -214px!important;
-			background-repeat: no-repeat !important;
-			right: 16px;
-			width: 300px;
-			height: 36px;
-			border-radius: 2px;
-			line-height: 36px;
-			border: none;
-			text-align: left;
-			padding: 0px 16px;
-			transition: all 0.25s ease;
-			font-family: verdana, arial, sans-serif;
-		}	
+/* Submit Button */
+.morelink {
+	position: absolute;
+	top: 148px;
+	box-shadow: 0px 1px 5px rgba(0, 0, 0, 0.24);
+	background-color: #516ae8;
+	background-image: url(%%spritesheet%%) !important;
+	background-position: 120px -214px!important;
+	background-repeat: no-repeat !important;
+	right: 16px;
+	width: 145px;
+	height: 36px;
+	border-radius: 2px;
+	line-height: 36px;
+	border: none;
+	text-align: left;
+	padding: 0px 16px;
+	transition: all 0.25s ease;
+	font-family: verdana, arial, sans-serif;
 
-			.morelink:hover {
-				background-color: #5a72ee;
-				box-shadow: 0px 5px 8px rgba(0,0,0,0.24);
-			}
+	a {
+		color: $color-tetriary;
+		font-weight: normal;
+		font-size: 14px;
+		letter-spacing: 0px;
 
-				.morelink:active {
-					background-color: #4059DB;
-					box-shadow: 0px 8px 12px rgba(0,0,0,0.60);
-				}
+		&:before {
+			color: #fff;
+		}
+	}
 
+	.submit-link & {
+		right: 171px;
 
-			.morelink a {
-				color: #fff;
-				font-weight: normal;
-				font-size: 14px;
-				letter-spacing: 0px;
-			}
+		a:before {
+			content: "New Link ";
+			display: inline;
+		}
+	}
 
+	.submit-text & {
+		a:before {
+			content: "New Post ";
+			display: inline;
+		}
+	}
 
-			.morelink:after {
-				content: "Please remember to read the rules. Thank you!";
-				padding: 16px;
-				width: 300px;
-				position: absolute;
-				right: 0px;
-				margin-top: 0px;
-				display: block;
-				background-color: #516AE8;
-				color: #fff;
-				letter-spacing: 0px;
-				z-index: 100;
-				opacity: 0;
-				transition: all 0.25s ease;
-				transition-delay: 0s;
-				font-weight: normal;
-				line-height: 1.4em;
-				border-radius: 2px 2px 0px 0px;
-				box-shadow: 0px 1px 5px rgba(0, 0, 0, 0.16);
-				visibility: hidden;
-				pointer-events: none;
-			}
+	&:hover {
+		background-color: #5a72ee;
+		box-shadow: 0px 5px 8px rgba(0,0,0,0.24);
+	}
 
-				.morelink:hover:after {
-					margin-top: 16px;
-					opacity: 100;
-					visibility: visible;
-					transition-delay: 0.25s;
-				}
+	&:active {
+		background-color: #4059DB;
+		box-shadow: 0px 8px 12px rgba(0,0,0,0.60);
+	}
 
-			/* Restricted button */
-			.disabled .morelink {
-				box-shadow: none !important;
-				background-color: #CFCFCF;
+	&:after {
+		content: "Please remember to read the rules. Thank you!";
+		padding: 16px;
+		width: 300px;
+		position: absolute;
+		right: 0px;
+		margin-top: 0px;
+		display: block;
+		background-color: #516AE8;
+		color: #fff;
+		letter-spacing: 0px;
+		z-index: 100;
+		opacity: 0;
+		transition: all 0.25s ease;
+		transition-delay: 0s;
+		font-weight: normal;
+		line-height: 1.4em;
+		border-radius: 2px 2px 0px 0px;
+		box-shadow: 0px 1px 5px rgba(0, 0, 0, 0.16);
+		visibility: hidden;
+		pointer-events: none;
+	}
 
-			}
+	.submit-link &:after {
+		right: -155px;
+	}
 
-				.disabled .morelink a {color: #4d5763;}
+	&:hover:after {
+		margin-top: 16px;
+		opacity: 100;
+		visibility: visible;
+		transition-delay: 0.25s;
+	}
 
-				.disabled .morelink:after {
-					content: "You must be approved by the moderators in order to submit.";
-					background-color: #CFCFCF;
-					color: #4d5763;
-				}
+	/* Restricted button */
+	.disabled & {
+		box-shadow: none !important;
+		background-color: #CFCFCF;
 
+		a {color: #4d5763;}
+	}
+
+	.disabled &:after {
+		content: "You must be approved by the moderators in order to submit.";
+		background-color: #CFCFCF;
+		color: #4d5763;
+	}
+}	
 
 		.account-activity-box, .sidebox.create, .morelink .nub {display: none;} //.sidebox.submit.submit-text
 
@@ -2982,13 +3002,13 @@ body:before {height: 416px; background: #393D41 url(%%headerimg%%) fixed no-repe
 
     /* Add or subtract THE SAME AMOUNT ON EACH OF THESE */
 body>.content                   	{margin-top:        342px;} 
-.side                         	 	{margin-top:        496px;} 
-.search-page .side           	   	{margin-top:        444px;} 
-.comments-page .side            	{margin-top:        608px;}
+.side                         	 	{margin-top:        446px;} 
+.search-page .side           	   	{margin-top:        394px;} 
+.comments-page .side            	{margin-top:        558px;}
 .res .comments-page .side       	{margin-top:        572px;}
-.comments-page .side .linkinfo  	{margin-top:        296px;}
+.comments-page .side .linkinfo  	{margin-top:        246px;}
 .morelink                       	{top:               394px;}
-.submit-text .morelink          	{top:               444px;}
+.submit-text .morelink          	{top:               394px;}
 #search, .search-page .morelink 	{top:               342px;}
 .search-page .submit-text .morelink {top:               394px;}
 #header-bottom-left             	{top:               278px;}
