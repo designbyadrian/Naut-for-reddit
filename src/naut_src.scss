@@ -646,8 +646,8 @@ body {
 	/* Restricted button */
 	.disabled & {
 		box-shadow: none !important;
-		background-color: #CFCFCF;
-
+		background-color: #CFCFCF !important;
+		width: 300px;
 		a {color: #4d5763;}
 	}
 
