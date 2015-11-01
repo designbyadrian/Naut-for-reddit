@@ -990,8 +990,8 @@ body {
 						margin: 1px 0px 1px 0px;
 					}
 
-						.link .score.likes {color: $color-like;}
-						.link .score.dislikes {color: $color-dislike;}
+					.link .score.likes {color: $color-like;}
+					.link .score.dislikes {color: $color-dislike;}
 
 					.arrow {
 						margin: 0px 0px 0px 2px;
@@ -2185,7 +2185,7 @@ body {
 					.comments-page .side .linkinfo .date {color: #B3B3B3;}
 						.comments-page .side .linkinfo .date:first-letter{text-transform: capitalize;}
 
-					.comments-page .side .linkinfo .score {color: #4D5763;}
+					.comments-page .side .linkinfo .score {color: #4D5763;display:none !important}
 					.linkinfo .shortlink input {border: 1px solid #E5E5E5;}
 
 				.res.comments-page .side {margin-top: 374px;}
@@ -3000,11 +3000,11 @@ body>.content {
 body:before {height: 416px; background: #393D41 url(%%headerimg%%) fixed no-repeat 33% 0}
 @media only screen and (min-width : 1921px) {body:before {background-size: cover;}}
 
-    /* Add or subtract THE SAME AMOUNT ON EACH OF THESE */
+/* Add or subtract THE SAME AMOUNT ON EACH OF THESE */
 body>.content                   	{margin-top:        342px;} 
 .side                         	 	{margin-top:        446px;} 
 .search-page .side           	   	{margin-top:        394px;} 
-.comments-page .side            	{margin-top:        558px;}
+.comments-page .side            	{margin-top:        528px;}
 .res .comments-page .side       	{margin-top:        572px;}
 .comments-page .side .linkinfo  	{margin-top:        246px;}
 .morelink                       	{top:               394px;}
@@ -3056,10 +3056,70 @@ body .content .sitetable .link .title a:hover, .link .domain a:hover, .link .ent
 {color: $color-secondary}
 /* --- End Addon --- */
 
+/* Hide ads */
+a[href="https://www.reddit.com/r/NoMansSkyOffTopic/ads/"],
+#ad_main, #ad_sponsorship, .link.promotedlink.promoted
+{display:none !important;}
+
+/* 4cdbast cleanup, where do these go? */
+.midcol {display: none !important;} .thumbnail {margin:16px 16px 0px !important;}
+
+/* Work Woman */
+.side .usertext-body {
+	background-image: url(%%under-construction%%);
+	background-position: left bottom;
+	background-repeat: no-repeat;
+	background-size: 300px;
+	margin-left: -16px;
+	margin-right: -16px;
+	padding-left: 16px;
+	padding-right: 16px;
+	padding-bottom: 215px;
+}
+
+/* Bustom flairs */
 .linkflairlabel {
 	&.linkflair-spoiler {
 		border-color: $color-red;
 		background-color: $color-red;
 		color: white;
 	}
+
+	&.linkflair-release {
+		animation: flairColorRotate 4s linear 0s infinite;
+		border-color: $color-red;
+		background-color: $color-red;
+		color: white;
+	}
+}
+
+@keyframes flairColorRotate {
+    from {
+    	border-color: rgb(255, 0, 0);
+        background-color: rgb(255, 0, 0);
+    }
+    16.6% {
+    	border-color: rgb(255, 0, 255);
+        background-color: rgb(255, 0, 255);
+    }
+    33.3% {
+    	border-color: rgb(0, 0, 255);
+        background-color: rgb(0, 0, 255);
+    }
+    50% {
+    	border-color: rgb(0, 255, 255);
+        background-color: rgb(0, 255, 255);
+    }
+    66.6% {
+    	border-color: rgb(0, 255, 0);
+        background-color: rgb(0, 255, 0);
+    }
+    83.3% {
+    	border-color: rgb(255, 255, 0);
+        background-color: rgb(255, 255, 0);
+    }
+    to {
+    	border-color: rgb(255, 0, 0);
+        background-color: rgb(255, 0, 0);
+    }
 }
