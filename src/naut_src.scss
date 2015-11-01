@@ -570,7 +570,8 @@ body {
 	text-align: left;
 	padding: 0px 16px;
 	transition: all 0.25s ease;
-	font-family: verdana, arial, sans-serif;
+	font-family: futura, arial, sans-serif;
+	text-transform: uppercase;
 
 	a {
 		color: $color-tetriary;
@@ -587,14 +588,14 @@ body {
 		right: 171px;
 
 		a:before {
-			content: "New Link ";
+			content: "Link ";
 			display: inline;
 		}
 	}
 
 	.submit-text & {
 		a:before {
-			content: "New Post ";
+			content: "Post ";
 			display: inline;
 		}
 	}
@@ -670,9 +671,19 @@ body {
 
 			
 		/* Redditname + Subscibers & Here right now */
-		.titlebox h1 {
-			color: #4d5763;
-			margin-bottom: 6px;
+		.titlebox {
+			h1,h2 {
+				font-family: Futura, Verdana, sans-serif;
+			}
+			h1 {
+				margin-bottom: 6px;
+				a {
+					color: $color-secondary;
+				}
+			}
+			h2 {
+				text-transform: uppercase;
+			}
 		}
 
 
@@ -687,7 +698,7 @@ body {
 			div.titlebox span.word {display: none;}
 			.titlebox .users-online {display: inline;}
 			.titlebox .users-online:before {display: none;}
-			div.titlebox span.number:after {content: " readers,";}
+			div.titlebox span.number:after {content: " mans,";}
 			.titlebox .users-online .number {font-style: italic;}
 			.titlebox .users-online .number:before {content: "";}
 			.titlebox .users-online .number:after {content: " here";}
@@ -1137,7 +1148,7 @@ body {
 				.link .title {
 					margin: -2px 0px 0px 0px;
 					font-size: 18px;
-					font-family: Arial, sans-serif;
+					font-family: Futura, Verdana, sans-serif;
 					overflow: visible;
 					transition: all 0.15s ease;
 					line-height: 1.33;
